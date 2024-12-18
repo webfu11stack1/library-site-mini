@@ -1,0 +1,360 @@
+        /* Asosiy sozlamalar */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+       
+
+    /* Modal konteyner */
+.modal-content {
+    background-color: #f8f9fa; /* Yengil oqish fon */
+    border-radius: 15px; /* Yumaq burchaklar */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soyalar */
+    padding: 20px;
+}
+
+/* Modal boshligi */
+.modal-header {
+    background-color: #007bff; /* Moviy fon */
+    color: #fff; /* Oq matn */
+    border-bottom: 2px solid #0056b3; /* Chuqurroq soyali chiziq */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 15px;
+}
+
+/* Modal sarlavha */
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+/* Modal tanasi */
+.modal-body {
+    padding: 15px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Savatcha elementlari */
+#cartItems div {
+    border-bottom: 1px solid #ddd; /* Ajratuvchi chiziq */
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+/* Jami narx */
+#totalPrice {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #28a745; /* Yashil rang */
+}
+
+/* Tugmalar */
+.modal-footer .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-footer .btn-primary {
+    background-color: #007bff; /* Moviy */
+    border-color: #007bff;
+    color: #fff;
+}
+
+.modal-footer .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Tugma hover va aktiv effekti */
+.btn-outline-primary:hover, .btn-outline-danger:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+}
+
+.btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.btn-outline-danger {
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+.btn-outline-danger:hover {
+    background-color: #f8d7da;
+    color: #dc3545;
+}
+
+/* Close tugmasi */
+.btn-close {
+    color: #fff;
+    opacity: 0.8;
+}
+
+.btn-close:hover {
+    color: #ffdddd;
+    opacity: 1;
+}
+
+/* Mobil moslashuv */
+@media (max-width: 768px) {
+    .modal-body {
+        font-size: 0.9rem;
+    }
+    .modal-title {
+        font-size: 1.3rem;
+    }
+    .modal-footer .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+  /* Book Shelf */
+.bookshelf {
+    display: flex;
+    justify-content: center;
+    background-color: #f8f8f8;
+    padding: 50px 20px;
+}
+
+.shelf {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    border-radius: 5px;
+}
+
+.book {
+    background-color: #d58562;
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-decoration: none; /* Linkning underline yo'q qilish */
+    transition: background-color 0.3s, transform 0.3s; /* Hover effektlari */
+}
+
+.book:hover {
+    background-color: #444;
+    transform: translateY(-5px); /* Hoverda biroz ko'tarilishi */
+}
+
+.book:nth-child(even) {
+    background-color: #444;
+}
+
+
+
+        
+        /* Kitob kartalari */
+        .book-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        
+        .book-card:hover {
+            
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card {
+            border: none;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .card img {
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid #007bff;
+        }
+        
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #007bff;
+        }
+        
+        .card-text {
+            font-size: 1rem;
+            color: #555;
+            margin: 0.5rem 0;
+        }
+        
+        .btn-add-cart {
+            background-color: #007bff;
+            color: #fff;
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            border: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        .btn-add-cart:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsiv dizayn */
+        @media (max-width: 768px) {
+            .navbar .nav-link {
+                font-size: 0.9rem;
+            }
+            .card img {
+                height: 150px;
+            }
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            transition: background-color 0.3s, padding 0.3s;
+            position: fixed; /* Sahifa scroll bo'lsa, header yuqorida qoladi */
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        
+        header.scrolled {
+            background-color: #d58562; /* Rangi scroll qilganda o'zgarsin */
+            padding: 10px 50px; /* Scroll qilinganda biroz kichrayadi */
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #444;
+        }
+        
+        .logo i {
+            color: #fff; /* Rangi o'zgartirish */
+            margin-right: 10px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #444;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #e8c31d;
+        }
+        
+        .header-icons {
+            display: flex;
+            align-items: center;
+        }
+        
+        .header-icons i {
+            margin-left: 15px;
+            color: #555;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .header-icons i:hover {
+            color: #fff;
+        }
+        
+        
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 100px;
+            background: #fff;
+        }
+        
+        .hero-text {
+            max-width: 500px;
+        }
+        
+        .hero-text h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            color: #444;
+        }
+        
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #d58562;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #bf6d4c;
+        }
+        
+        .hero-image img {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }

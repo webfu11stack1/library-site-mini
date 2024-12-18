@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitoblar - Noble Kutubxonasi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/book.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-book"></i> Noble Kutubxonasi
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Bosh sahifa</a></li>
+                
+                <li><a href="#">Kitoblar</a></li>
+                <li><a href="#" id="cartButton" data-bs-toggle="modal" data-bs-target="#cartModal">Savatcha</a></li>
+                
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <i class="fa-solid fa-search"></i>
+            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-envelope"></i>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Kutubxonamizda eksklyuziv kitoblar to'plamini toping</h1>
+            <p>Turli yo'nalishlardagi kitoblarimiz to'plamini o'rganing. Talabalar, mutaxassislar va kitobxonlar uchun mo'ljallangan.</p>
+            <a style="color: red;" href="#" class="btn" data-bs-toggle="modal" data-bs-target="#arizaModal">Ma'lumot so'rash</a>
+        </div>
+        <div class="hero-image">
+            <img src="/pic/image.png" alt="Kutubxona javonlari">
+        </div>
+    </section>
+    <section class="bookshelf">
+        <div class="shelf">
+            <a href="/books/dev/book.html" class="book">Dasturlash</a>
+            
+            <a href="/books/dev/badiiybook/badiy.html" class="book">Badiiy asarlar</a>
+            <a href="/books/dev/math/mathbook.html" class="book">Oliy matematika</a>
+        </div>
+    </section>
+    <!-- Kitob kartalari -->
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Oliy Matematika</h1>
+        <div class="mb-4">
+            <div class="input-group">
+                <input type="text" id="searchBar" class="form-control" placeholder="Kitob nomini kiriting..." onkeyup="searchBooks()">
+                <span class="input-group-text">
+                    <i class="fas fa-search"></i>
+                </span>
+            </div>
+        </div>
+        <div class="row" id="bookCards">
+            <!-- Kitob kartasi -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 book-card" data-title="Matematik Tahlil">
+                <div class="card">
+                    <img src="/books/dev/math/pic/image.png" class="card-img-top" alt="Matematik Tahlil">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Matematik Tahlil</h5>
+                        <p class="card-text">Narx: 75,000 so'm</p>
+                        <button style="color: red;" class="btn btn-add-cart" data-name="Matematik Tahlil" data-price="75000">Savatga qo'shish</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 book-card" data-title="Differensial Tenglamalar">
+                <div class="card">
+                    <img src="/books/dev/math/pic/image copy.png" class="card-img-top" alt="Differensial Tenglamalar">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Differensial Tenglamalar</h5>
+                        <p class="card-text">Narx: 80,000 so'm</p>
+                        <button style="color: red;" class="btn btn-add-cart" data-name="Differensial Tenglamalar" data-price="80000">Savatga qo'shish</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 book-card" data-title="Integral Hisoblash">
+                <div class="card">
+                    <img src="/books/dev/math/pic/image copy 2.png" class="card-img-top" alt="Integral Hisoblash">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Integral Hisoblash</h5>
+                        <p class="card-text">Narx: 90,000 so'm</p>
+                        <button style="color: red;" class="btn btn-add-cart" data-name="Integral Hisoblash" data-price="90000">Savatga qo'shish</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 book-card" data-title="Matematik Modelleme">
+                <div class="card">
+                    <img src="/books/dev/math/pic/image copy 3.png" class="card-img-top" alt="Matematik Modelleme">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Matematik Modelleme</h5>
+                        <p class="card-text">Narx: 85,000 so'm</p>
+                        <button style="color: red;" class="btn btn-add-cart" data-name="Matematik Modelleme" data-price="85000">Savatga qo'shish</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 book-card" data-title="Lineer Algebra">
+                <div class="card">
+                    <img src="/books/dev/math/pic/image copy 4.png" class="card-img-top" alt="Lineer Algebra">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Lineer Algebra</h5>
+                        <p class="card-text">Narx: 65,000 so'm</p>
+                        <button style="color: red;" class="btn btn-add-cart" data-name="Lineer Algebra" data-price="65000">Savatga qo'shish</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 book-card" data-title="Matematik Analiz">
+                <div class="card">
+                    <img src="/books/dev/math/pic/image copy 5.png" class="card-img-top" alt="Matematik Analiz">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Matematik Analiz</h5>
+                        <p class="card-text">Narx: 70,000 so'm</p>
+                        <button style="color: red;" class="btn btn-add-cart" data-name="Matematik Analiz" data-price="70000">Savatga qo'shish</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 book-card" data-title="Topologiya">
+                <div class="card">
+                    <img src="/books/dev/math/pic/image copy 6.png" class="card-img-top" alt="Topologiya">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Topologiya</h5>
+                        <p class="card-text">Narx: 95,000 so'm</p>
+                        <button style="color: red;" class="btn btn-add-cart" data-name="Topologiya" data-price="95000">Savatga qo'shish</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+     <!-- Modal -->
+<div class="modal fade" id="arizaModal" tabindex="-1" aria-labelledby="arizaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="arizaModalLabel">Ariza yuborish</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="arizaForm">
+            <div class="mb-3">
+              <label for="ism" class="form-label">Ism</label>
+              <input type="text" class="form-control" id="ism" required>
+            </div>
+            <div class="mb-3">
+              <label for="nomer" class="form-label">Telefon raqami</label>
+              <input type="tel" class="form-control" id="nomer" required>
+            </div>
+            <div class="mb-3">
+              <label for="izoh" class="form-label">Qisqacha izoh</label>
+              <textarea class="form-control" id="izoh" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Ariza yuborish</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+      /* Modal styling */
+      .modal-content {
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-out;
+      }
+    
+      .modal-header {
+        background-color: #007bff;
+        color: #fff;
+        border-bottom: none;
+        border-radius: 10px 10px 0 0;
+      }
+    
+      .modal-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+    
+      .btn-close {
+        color: #fff;
+        opacity: 0.7;
+      }
+    
+      .modal-body {
+        background-color: #f8f9fa;
+        padding: 20px;
+      }
+    
+      .form-label {
+        font-weight: 600;
+        color: #333;
+      }
+    
+      .form-control {
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+      }
+    
+      .form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+      }
+    
+      .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        border-radius: 5px;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+      }
+    
+      .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+      }
+    
+      /* Modal animation */
+      .modal.fade .modal-dialog {
+        transform: scale(0.7);
+        transition: transform 0.3s ease-out;
+      }
+    
+      .modal.fade.show .modal-dialog {
+        transform: scale(1);
+      }
+    </style>
+  <!-- Success Notification (Bootstrap Toast) -->
+  <div  class="toast-container position-fixed top-0 end-0 p-3">
+    <div style="background-color: greenyellow;" id="successToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Xabar</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Ariza muvaffaqiyatli yuborildi!
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bootstrap 5 CSS and JS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- JavaScript for Form Submission and Toast Display -->
+  <script>
+    document.getElementById('arizaForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+  
+      // Show success toast
+      var toast = new bootstrap.Toast(document.getElementById('successToast'));
+      toast.show();
+  
+      // Close modal
+      var modal = bootstrap.Modal.getInstance(document.getElementById('arizaModal'));
+      modal.hide();
+  
+      // Clear form
+      document.getElementById('arizaForm').reset();
+    });
+  </script>
+
+<!-- Toast bildirishnoma -->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1055;">
+    <div id="toastMessage" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                Mahsulotingiz savatga qo'shildi!
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
+
+    <!-- Savatcha Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Savatcha</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cartItems">
+                        <!-- Savatcha mahsulotlari shu yerda ko‘rsatiladi -->
+                    </div>
+                    <div class="text-end mt-4">
+                        <strong>Jami:</strong> <span id="totalPrice">0</span> so'm
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="clearCartButton">Tozalash</button>
+                    <button type="button" class="btn btn-primary" id="orderButton">Buyurtma berish</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+<style>
+    .toast {
+    font-size: 1rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.toast-body {
+    font-weight: bold;
+}
+
+</style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/script/book.js">
+       
+    </script>
+</body>
+</html>
+
+
+
+

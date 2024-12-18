@@ -1,0 +1,318 @@
+ /* General Reset */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s, padding 0.3s;
+    position: fixed; /* Sahifa scroll bo'lsa, header yuqorida qoladi */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header.scrolled {
+    background-color: #d58562; /* Rangi scroll qilganda o'zgarsin */
+    padding: 10px 50px; /* Scroll qilinganda biroz kichrayadi */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #444;
+}
+
+.logo i {
+    color: #fff; /* Rangi o'zgartirish */
+    margin-right: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e4c726;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons i {
+    margin-left: 15px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.header-icons i:hover {
+    color: #fff;
+}
+
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 100px;
+    background: #fff;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #d58562;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #bf6d4c;
+}
+
+.hero-image img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/* Book Shelf */
+.bookshelf {
+    display: flex;
+    justify-content: center;
+    background-color: #f8f8f8;
+    padding: 50px 20px;
+}
+
+.shelf {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    border-radius: 5px;
+}
+
+.book {
+    background-color: #d58562;
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-decoration: none; /* Linkning underline yo'q qilish */
+    transition: background-color 0.3s, transform 0.3s; /* Hover effektlari */
+}
+
+.book:hover {
+    background-color: #444;
+    transform: translateY(-5px); /* Hoverda biroz ko'tarilishi */
+}
+
+.book:nth-child(even) {
+    background-color: #444;
+}
+
+
+/* Services Section */
+.services {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #444;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-box {
+    flex: 1 1 250px;
+    max-width: 280px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-box img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.service-box h3 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.service-box .btn {
+    padding: 8px 15px;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #d58562;
+    text-decoration: none;
+    font-weight: bold;
+}
+.contact-section {
+    padding: 50px;
+    background: #08163b;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-header h2 {
+    font-size: 2.5rem;
+    color: #f8f9fa;
+}
+.contact-header p {
+  
+  color: #f8f9fa;
+}
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.contact-info, .contact-map {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1 1 300px;
+    max-width: 500px;
+}
+
+.contact-info h3 {
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #7f8c8d;
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #3498db;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #2980b9;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
